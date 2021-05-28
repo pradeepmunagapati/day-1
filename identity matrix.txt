@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace day_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] arr1 = new int[2, 2];
+			int row, col, count = 0;
+            Console.WriteLine("enter array 1 values");
+			for (row = 0; row < 2; row++)
+			{
+				for (col = 0; col < 2; col++)
+				{
+					arr1[row, col] = Convert.ToInt32(Console.ReadLine());
+				}
+			}
+			for (row = 0; row < 2; row++)
+			{
+				for (col = 0; col < 2; col++)
+				{
+					if (row == col && arr1[row, col] != 1)
+					{
+						count = 1;
+						break;
+					}
+					else if (row != col && arr1[row, col] != 0)
+					{
+						count = 1;
+						break;
+					}
+				}
+			}
+
+			if (count == 0)
+			{
+				Console.WriteLine("Identity Matrix");
+			}
+			else
+			{
+				Console.WriteLine("Not Identity Matrix");
+			}
+			Console.ReadLine();
+        }
+    }
+}

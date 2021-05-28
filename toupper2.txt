@@ -1,0 +1,16 @@
+string sample = "i love my india";
+
+ string []sample1 = sample.Split(' ');
+string sample2=string.Empty;
+for (int i = 0; i < sample1.Length; i++)
+{
+if (sample1[i].Length > 1)
+{
+
+ sample2 = sample2 + " " + sample1[i].Substring(0, 1).ToUpper() + sample1[i].Substring(1, sample1[i].Length-1);
+}
+else
+{
+sample2 = sample2 + sample1[i].ToUpper();
+}
+}
