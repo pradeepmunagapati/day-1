@@ -1,0 +1,27 @@
+using System;
+
+namespace day_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+
+        {
+            int age;
+            Console.WriteLine("enter the person age : ");
+            age = Convert.ToInt32(Console.ReadLine());
+            if(age>=18 && age <= 60)
+            {
+                Console.WriteLine("person is eligible for vote");
+            }
+            else if(age<18)
+            {
+                Console.WriteLine("person is not eligible for vote");
+            }
+            else if (age > 60)
+            {
+                Console.WriteLine("person is senior citizen");
+            }
+        }
+    }
+}

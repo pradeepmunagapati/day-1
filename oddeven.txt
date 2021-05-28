@@ -1,0 +1,44 @@
+using System;
+
+namespace day_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+
+        {
+            int[] a = new int[10];
+            int[] even = new int[10];
+            int[] odd = new int[10];
+            int i,j=0,k=0;
+            Console.WriteLine("enter values");
+            for (i = 0; i < a.Length; i++)
+            {
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            for (i= 0;i <a.Length;i++)
+            {
+                if(a[i]%2 ==0)
+                {
+                    even[j] = Convert.ToInt32(a[i]);
+                    j++;
+                }
+                else
+                {
+                    odd[k] = Convert.ToInt32(a[i]);
+                    k++;
+                }
+            }
+            Console.WriteLine("even numbers are");
+            for(i=0;i <j;i++)
+            {
+                Console.WriteLine(even[i]);
+            }
+            Console.WriteLine("odd numbers are");
+            for (i = 0; i <k; i++)
+            {
+                Console.WriteLine(odd[i]);
+            }
+        }
+    }
+}
